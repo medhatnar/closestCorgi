@@ -1,11 +1,17 @@
 {
   "name": "mvp",
   "version": "1.0.0",
-  "description": "hola weather",
-  "main": "index.js",
+  "description": "closest corgi",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node server.js"
   },
-  "author": "narmin shahin",
-  "license": "ISC"
+  "author": "Narmin Shahin",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/router": "^0.2.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.79.0"
+  }
 }

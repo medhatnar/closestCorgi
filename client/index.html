@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="closestCorgi">
+<head>
+	<title>Closest Corgi</title>
+	<link rel="shortcut icon" href="http://i709.photobucket.com/albums/ww97/CiscoDr1982/corgi.gif" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+	<script src="controllers.js"></script>
+</head>
+<body>
+
+<center> <h1> Find the Closest Corgi you can adopt! </h1> <br>
+<img src="http://67.media.tumblr.com/avatar_aad958059dd6_128.png"</img></center>
+<center>
+<div ng-controller="corgiController">
+<form name="zipcodeForm" novalidate>
+
+		<input type="text" name="zipcode" placeholder="Enter Zipcode Here" 
+		ng-init="inputVal=''" 
+		ng-model="zipcode">
+
+		<button type='submit' ng-click="fetch(); inputVal = ''" value="Send"> Submit Location </button>
+
+</form>
+<br>
+<!-- corgi list will be input in the expression below -->
+{{data.resp}}
+</div>
+</center>
+</body>
+</html>
+
+
+<!-- - 
+- get data from api
+- display data using controllers/views in angular
+- [routes that do different things] 
+- how to pass to back end after capturing value-->
