@@ -7,8 +7,9 @@ closestCorgi.controller('corgiController', function($scope, $http){
 	$scope.fetch = function(){
     	$http.post("/corgis", {zipcode: $scope.zipcode})
   		.then(function(resp){
-  			console.log(resp)
-    		$scope.data.resp = resp.data;
+  			var parsed = JSON.parse(resp.data)
+  			console.log(parsed)
+    		$scope.data.resp = parsed.petfinder.pets.pet.media.photos.photo;
     	})
      }  
 });
