@@ -4,6 +4,8 @@ var request = require('request')
 var server = express();
 var bodyParser = require('body-parser')
 
+server.use(express.static(path.join(__dirname, '../node_modules')))
+
 server.use(express.static(path.join(__dirname, '../client')))
 server.use(bodyParser.json())
 server.post('/corgis', function(req,res){
