@@ -14,28 +14,17 @@ closestCorgi.controller('corgiController', function($scope, $http){
     		console.log(parsed.petfinder.pets.pet)
     	})
      };
-  $scope.filterFn = function(car)
-{
-    // Do some tests
+//   $scope.filterFn = function(car)
+// {
+//     // Do some tests
 
-    if(parsed.pic.description.$t && parsed.pic.name.$t && parsed.pic.media.photos.photo[3].$t)
-    {
-        return true; // this will be listed in the results
-    }
+//     if(parsed.pic.description.$t && parsed.pic.name.$t && parsed.pic.media.photos.photo[3].$t)
+//     {
+//         return true; // this will be listed in the results
+//     }
 
-    return false; // otherwise it won't be within the results
-  };
- $scope.filterFn = function(car)
-{
-    // Do some tests
-
-    if(parsed.petfinder.pets.pet.breeds.length < 2)
-    {
-        return true; // this will be listed in the results
-    }
-
-    return false; // otherwise it won't be within the results
-  };
+//     return false; // otherwise it won't be within the results
+//   };
 
 });
 

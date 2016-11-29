@@ -28,8 +28,7 @@
 	</form>
 			<br>
 
-		<div class="container-fluid">
-		<div ng-repeat="pic in data.pics filter:search | filter:filterFn">
+		<div ng-repeat="pic in data.pics">
 		<b>{{pic.name.$t}}</b>
 
 		<br>
@@ -40,8 +39,7 @@
 			
 			    {{pic.description.$t}}
 		</div>
-			
-	</div>
+		
 			<!-- corgi list will be input in the expression below -->
 </div>
 
