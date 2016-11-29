@@ -4,7 +4,7 @@
 	<title>Closest Corgi</title>
 	<link rel="shortcut icon" href="http://i709.photobucket.com/albums/ww97/CiscoDr1982/corgi.gif" />
 
-	<link rel="stylesheet" href="/bootstrap/dist/css">
+	<link rel="stylesheet" href="styles.css">
 
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
@@ -12,7 +12,8 @@
 </head> 
 <body bgcolor="#ffe8f9">
 
-<center> <h1> Find the Closest Corgi you can adopt! </h1> <br>
+ <h1> Find the Closest Corgi you can adopt! </h1> <br>
+ <center>
 <img src="http://67.media.tumblr.com/avatar_aad958059dd6_128.png"</img></center>
 <center>
 <div ng-controller="corgiController">
@@ -28,13 +29,13 @@
 			<br>
 
 		<div class="container-fluid">
-		<div ng-repeat="pic in data.pics">
+		<div ng-repeat="pic in data.pics filter:search | filter:filterFn">
 		<b>{{pic.name.$t}}</b>
 
 		<br>
 			
 			
-			<img class ="pups" ng-src='{{pic.media.photos.photo[3].$t}}'>
+			<img class ="pups" ng-src='{{pic.media.photos.photo[8].$t}}'>
 			<div style="width:250px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
 			
 			    {{pic.description.$t}}
