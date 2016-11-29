@@ -8,8 +8,10 @@ closestCorgi.controller('corgiController', function($scope, $http){
     	$http.post("/corgis", {zipcode: $scope.zipcode})
   		.then(function(resp){
   			var parsed = JSON.parse(resp.data)
-  			console.log(parsed)
-    		$scope.data.resp = parsed.petfinder.pets.pet.media.photos.photo;
+  			// console.log(parsed)
+    		$scope.data.pics = parsed.petfinder.pets.pet;
+   
+    		console.log($scope.data.pics)
     	})
      }  
 });

@@ -3,30 +3,45 @@
 <head>
 	<title>Closest Corgi</title>
 	<link rel="shortcut icon" href="http://i709.photobucket.com/albums/ww97/CiscoDr1982/corgi.gif" />
-	
+	<link rel="stylesheet" href="styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
 	<script src="controllers.js"></script>
 </head>
-<body>
+<body bgcolor="#ffe8f9">
 
 <center> <h1> Find the Closest Corgi you can adopt! </h1> <br>
 <img src="http://67.media.tumblr.com/avatar_aad958059dd6_128.png"</img></center>
 <center>
 <div ng-controller="corgiController">
-<form name="zipcodeForm" novalidate>
+	<form name="zipcodeForm" novalidate>
 
-		<input type="text" name="zipcode" placeholder="Enter Zipcode Here" 
-		ng-init="inputVal=''" 
-		ng-model="zipcode">
+			<input type="text" name="zipcode" placeholder="Enter Zipcode" 
+			ng-init="inputVal=''" 
+			ng-model="zipcode">
 
-		<button type='submit' ng-click="inputVal = ''; fetch(); " value="Send"> Submit Location </button>
+			<button type='submit' ng-click="inputVal = ''; fetch(); " value="Send"> Submit Location </button>
 
-</form>
-<br>
-<!-- corgi list will be input in the expression below -->
-{{data.resp}}
+	</form>
+			<br>
+
+			
+		<div ng-repeat="pic in data.pics">
+		<b>{{pic.name.$t}}</b>
+
+		<br>
+			
+			
+			<img class ="pups" ng-src='{{pic.media.photos.photo[3].$t}}'>
+			<div style="width:250px;height:100px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
+			
+			    {{pic.description.$t}}
+		</div>
+			
+	</div>
+			<!-- corgi list will be input in the expression below -->
 </div>
+
 </center>
 </body>
 </html>
