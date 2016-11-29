@@ -21,6 +21,6 @@ request.get("http://api.petfinder.com/pet.find?key=b3d52c8692c6896d3eb1ed809a3f5
  });
 })
 var port = process.env.PORT || 3000;
-server.listen(port);
+server.listen(3000);
 
 console.log("localhost is happening! Listening on port " + port);
