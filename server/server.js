@@ -13,7 +13,7 @@ server.post('/corgis', function(req,res){
 var zipcode = req.body.zipcode;
 console.log(zipcode)
 
-request.get("http://api.petfinder.com/pet.find?key=b3d52c8692c6896d3eb1ed809a3f5271&location="+zipcode+"&format=json&animal=dog&breed=Corgi&breed=Welsh Corgi&count=10&size=S&output=basic"
+request.get("http://api.petfinder.com/pet.find?key=b3d52c8692c6896d3eb1ed809a3f5271&location="+zipcode+"&format=json&animal=dog&breed=Corgi&breed=Welsh Corgi&count=30&size=S&output=basic"
 , function (error, response, body) {
   if (error) throw new Error(error);
 
